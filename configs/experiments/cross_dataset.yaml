@@ -1,0 +1,10 @@
+# Experiment G. Dataset names resolve through site-local adapters and paths.
+train: [waymo_open]
+test: [nuscenes, argoverse2, coda]
+adaptation:
+  frozen_zero_shot: true
+  linear_probe: true
+  full_finetune: false
+seeds: [7, 17, 29, 43, 71]
+base_config: ../base.yaml
+

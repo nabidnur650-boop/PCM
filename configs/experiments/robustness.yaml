@@ -1,0 +1,10 @@
+# Experiment F. Severity levels are defined in docs/RESEARCH_PROTOCOL.md.
+corruptions:
+  rain: [1, 2, 3, 4, 5]
+  fog: [1, 2, 3, 4, 5]
+  night: [1, 2, 3]
+  sensor_dropout: [camera, lidar, radar, camera_lidar]
+  motion_blur: [1, 2, 3, 4, 5]
+seeds: [7, 17, 29, 43, 71]
+base_config: ../base.yaml
+

@@ -1,0 +1,6 @@
+# Experiment C from the research plan. Run each value as a separate, seeded job.
+parameter: model.num_branches
+values: [1, 2, 4, 8, 16, 32]
+seeds: [7, 17, 29, 43, 71]
+base_config: ../base.yaml
+

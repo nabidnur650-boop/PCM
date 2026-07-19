@@ -1,0 +1,6 @@
+# Experiment H. Dataset adapters must convert seconds to frames using native timestamps.
+parameter: evaluation.occlusion_seconds
+values: [1, 3, 5, 10, 20]
+seeds: [7, 17, 29, 43, 71]
+base_config: ../base.yaml
+

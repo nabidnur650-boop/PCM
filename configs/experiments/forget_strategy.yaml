@@ -1,0 +1,6 @@
+# Experiment D. These values are implemented by PersistentCounterfactualMemory.
+parameter: model.forget_strategy
+values: [no_forget, threshold, learned, adaptive]
+seeds: [7, 17, 29, 43, 71]
+base_config: ../base.yaml
+

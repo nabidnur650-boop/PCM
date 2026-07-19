@@ -1,0 +1,40 @@
+extends: base.yaml
+seed: 17
+device: cpu
+output_dir: outputs/smoke
+
+model:
+  model_dim: 32
+  num_slots: 8
+  num_branches: 4
+  num_heads: 4
+  dropout: 0.0
+  occupancy_dim: 16
+  future_steps: 4
+
+data:
+  history_steps: 5
+  future_steps: 4
+  num_objects: 5
+  samples: 12
+  validation_samples: 8
+  occlusion_min: 1
+  occlusion_max: 3
+  occupancy_dim: 16
+
+training:
+  batch_size: 4
+  learning_rate: 0.001
+  num_workers: 0
+  stages:
+    - name: masked_pretrain
+      epochs: 1
+    - name: pcm
+      epochs: 1
+    - name: counterfactual
+      epochs: 1
+    - name: joint
+      epochs: 1
+    - name: planner
+      epochs: 1
+

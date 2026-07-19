@@ -1,0 +1,6 @@
+# Experiment B from the research plan. Values are seconds at the dataset frame rate.
+parameter: data.history_seconds
+values: [2, 5, 10, 20, 40]
+seeds: [7, 17, 29, 43, 71]
+base_config: ../base.yaml
+

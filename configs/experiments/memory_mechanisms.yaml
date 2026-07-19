@@ -1,0 +1,11 @@
+# Experiment A. External backends are pinned in the final benchmark environment.
+parameter: memory.backend
+values: [sliding_window, transformer, gru, lstm, rwkv, mamba, mamba2, pcm]
+seeds: [7, 17, 29, 43, 71]
+controls:
+  matched_decoder: true
+  matched_encoder: true
+  parameter_tolerance_percent: 5
+  matched_history: true
+base_config: ../base.yaml
+

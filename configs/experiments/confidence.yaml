@@ -1,0 +1,7 @@
+# Experiment E. The scalar PCM condition is implemented; vector and Bayesian are
+# registered comparison targets that require separate estimators before execution.
+parameter: memory.confidence_mode
+values: [none, scalar, vector, bayesian, pcm]
+seeds: [7, 17, 29, 43, 71]
+base_config: ../base.yaml
+
