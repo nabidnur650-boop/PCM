@@ -1,0 +1,71 @@
+{
+  "seed": 17,
+  "device": "cuda",
+  "output_dir": "outputs/local_journal/reference",
+  "model": {
+    "input_dim": 8,
+    "model_dim": 64,
+    "num_slots": 16,
+    "num_branches": 16,
+    "max_branches": 32,
+    "num_heads": 4,
+    "dropout": 0.05,
+    "max_age": 80,
+    "forget_strategy": "no_forget",
+    "forget_threshold": 0.35,
+    "occupancy_dim": 36,
+    "future_steps": 8,
+    "num_sensor_types": 4
+  },
+  "loss": {
+    "prediction": 1.0,
+    "memory": 0.1,
+    "counterfactual": 0.1,
+    "uncertainty": 0.03,
+    "occupancy": 0.5,
+    "consistency": 0.02,
+    "risk": 0.2,
+    "planning": 0.5,
+    "diversity_margin": 0.75,
+    "plausibility_radius": 8.0
+  },
+  "data": {
+    "history_steps": 8,
+    "future_steps": 8,
+    "num_objects": 8,
+    "samples": 384,
+    "validation_samples": 128,
+    "occlusion_min": 1,
+    "occlusion_max": 6,
+    "occupancy_dim": 36
+  },
+  "training": {
+    "batch_size": 32,
+    "learning_rate": 0.0008,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "num_workers": 0,
+    "stages": [
+      {
+        "name": "masked_pretrain",
+        "epochs": 2
+      },
+      {
+        "name": "pcm",
+        "epochs": 5
+      },
+      {
+        "name": "counterfactual",
+        "epochs": 5
+      },
+      {
+        "name": "joint",
+        "epochs": 15
+      },
+      {
+        "name": "planner",
+        "epochs": 3
+      }
+    ]
+  }
+}

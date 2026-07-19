@@ -1,0 +1,8 @@
+{
+  "parameters_millions": 0.134611,
+  "latency_p50_ms": 99.84577499562874,
+  "latency_p95_ms": 123.37894550873897,
+  "throughput_samples_s": 156.12082069195887,
+  "peak_memory_mb": NaN,
+  "benchmark_device": "cpu"
+}

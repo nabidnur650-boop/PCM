@@ -1,0 +1,7 @@
+{
+  "parameters_millions": 0.134611,
+  "latency_p50_ms": 27.09375150152482,
+  "latency_p95_ms": 28.91609055659501,
+  "throughput_samples_s": 592.1769249673157,
+  "peak_memory_mb": 25.84765625
+}
